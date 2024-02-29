@@ -50,7 +50,7 @@ function Footer({ numLocations}) {
 function Report (props) {
   
   if (props.reports.length === 0) {
-    return <p className="mt-8 text-2xl text-center">There are no locations up and running yet.</p>;
+    return <p className="text-2xl text-center mt-">There are no locations up and running yet.</p>;
   }
 
   const headers = ['Location', ...props.hours, 'Totals'];
@@ -187,19 +187,20 @@ function CreateForm(props) {
     <div className="flex justify-center my-8">
       <form onSubmit={handleSubmit} className="flex flex-col w-2/3 gap-4 p-4 mx-auto bg-green-300 rounded-md">
         <h2 className="mb-3 text-2xl text-center">Create Cookie Stand</h2>
-        <div className="mb-4">
-          <label htmlFor="location" className="block">Location</label>
-          <input
-            name="location"
-            id="location"
-            type="text"
-            className="w-full p-2"
-            value={formData.location}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex flex-wrap items-end gap-4 mb-4">
-          <div className="flex-1">
+        <div className="flex items-center mb-4">
+            <label htmlFor="location" className="mr-2">Location</label>
+            <input
+              name="location"
+              id="location"
+              type="text"
+              className="flex-1 p-2"
+              value={formData.location}
+              onChange={handleChange}
+            />
+          </div>
+        <div className="flex flex-wrap items-end gap-3 p-3 bg-green-200 rounded-md">
+        <div className="flex flex-wrap items-end gap-4">
+          <div className="flex-1 w-full">
             <label htmlFor="minCustomers" className="block text-center">Minimum Customers per Hour</label>
             <input
               name="minCustomers"
@@ -210,7 +211,8 @@ function CreateForm(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-1">
+          </div>
+          <div className="flex-1 w-full">
             <label htmlFor="maxCustomers" className="block text-center">Maximum Customers per Hour</label>
             <input
               name="maxCustomers"
@@ -221,7 +223,7 @@ function CreateForm(props) {
               onChange={handleChange}
             />
           </div>
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <label htmlFor="avgCookies" className="block text-center">Average Cookies per Sale</label>
             <input
               name="avgCookies"
@@ -234,7 +236,7 @@ function CreateForm(props) {
             />
           </div>
           <div className="w-full sm:w-auto">
-            <button type="submit" className="w-full px-5 py-2 mt-4 bg-green-500 hover:bg-green-600 sm:w-auto sm:mt-0">Create</button>
+            <button type="submit" className="w-full px-5 py-2 mt-4 bg-green-500 rounded-md hover:bg-green-600">Create</button>
           </div>
         </div>
       </form>
