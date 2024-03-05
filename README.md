@@ -1,3 +1,14 @@
+# Cookie Stand Admin
+
+This is the Cookie Stand Admin Vercel Deployment Lab, course 401 class 41 on March 4, 2024.
+
+### Author: Lana Z
+
+### Links and Resources
+
+- [Deployed site:](https://cookie-stand-admin-azure-seven.vercel.app/) https://cookie-stand-admin-azure-seven.vercel.app/
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
